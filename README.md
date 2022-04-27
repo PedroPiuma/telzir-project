@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available scripts for run code correctly
 
-In the project directory, you can run:
+In the project directory, you need run:
 ### `npm install` for install every dependencies before run code
 ### `npm start` for run code and building the page
 
