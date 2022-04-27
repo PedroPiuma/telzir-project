@@ -37,33 +37,40 @@ const Form = () => {
     }, [origin, target, time, plan])
 
     return (
-        <form className='form'>
-            {<p>{result ? `Valor da ligação sem plano: R$${result}` : ''}</p>}
-            {<p>{planResult ? `Valor da ligação com plano: R$${planResult}` : ''}</p>}
+        <form className='form' onSubmit={(event) => event.preventDefault()}>
+            {<p>{result ? `Ligação sem plano: R$ ${result}` : ''}</p>}
+            {<p>{planResult ? `Ligação com plano: R$ ${planResult}` : ''}</p>}
 
-            <label htmlFor='origin-ddd'>DDD de origem:
-                <select name="origin-ddd" onChange={(e) => setOrigin(e.target.value)}>
+            <label htmlFor='origin-ddd'>
+                DDD de origem:
+                <select className='form-select' name="origin-ddd" onChange={(e) => setOrigin(e.target.value)}>
                     <option value='011'>011</option>
                     <option value='016'>016</option>
                     <option value='017'>017</option>
                     <option value='018'>018</option>
                 </select>
             </label>
-            <label htmlFor='target-ddd'>DDD de destino:
-                <select name="target-ddd" onChange={(e) => setTarget(e.target.value)}>
+            <label htmlFor='target-ddd'>
+                DDD de destino:
+                <select className='form-select' name="target-ddd" onChange={(e) => setTarget(e.target.value)}>
                     <option value='011'>011</option>
                     <option value='016' selected>016</option>
                     <option value='017'>017</option>
                     <option value='018'>018</option>
                 </select>
             </label>
-            <input name="time" type={'text'} placeholder='Tempo em minutos' onChange={(e) => setTime(e.target.value)} />
-            <label htmlFor='plan'>Planos</label>
-            <select name="plan" onChange={(e) => setPlan(e.target.value)}>
-                <option value='falemais30'>Fale Mais 30</option>
-                <option value='falemais60'>Fale Mais 60</option>
-                <option value='falemais120'>Fale Mais 120</option>
-            </select>
+            <label>
+                Tempo:
+                <input className='form-input-time form-select' size={3} placeholder='Minutos' name="time" type={'text'} onChange={(e) => setTime(e.target.value)} />
+            </label>
+            <label htmlFor='plan'>
+                Planos:
+                <select className='form-select' name="plan" onChange={(e) => setPlan(e.target.value)}>
+                    <option value='falemais30'>Fale Mais 30</option>
+                    <option value='falemais60'>Fale Mais 60</option>
+                    <option value='falemais120'>Fale Mais 120</option>
+                </select>
+            </label>
         </form>
     )
 }
