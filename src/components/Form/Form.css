@@ -1,4 +1,5 @@
 .form {
+  color: rgba(0, 255, 119, 0.733);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,4 +23,11 @@
 
 .form-input-time {
   text-align: center;
+}
+
+.form-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }

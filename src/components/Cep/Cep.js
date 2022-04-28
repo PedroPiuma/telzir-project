@@ -1,6 +1,7 @@
 import './Cep.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import InfoCep from '../InfoCep/InfoCep'
 
 const Form = (props) => {
     const [cep, setCep] = useState('')
@@ -25,13 +26,13 @@ const Form = (props) => {
     }, [cep])
     return (
         <div className='cep-form'>
-            <p className='margin-zero text-center'>Buscar CEP</p>
+            {data.ddd ? <InfoCep data={data.ddd} /> : ''}
+            <p className='margin-zero text-center'>Digite o CEP de sua localidade</p>
             <form className='cep-form-container'>
                 <div className='cep-form-container-box'>
-                    <label className='cep-form-container-box-label' htmlFor='cep'>CEP</label>
-                    <input id='cep' className='cep-form-container-box-input' type='text' maxLength={8} onChange={(event) => setCep(event.target.value)} autoComplete='off' disabled={disabled} />
+                    <input id='cep' placeholder='Digite seu CEP aqui' className='cep-form-container-box-input' type='text' maxLength={8} onChange={(event) => setCep(event.target.value)} autoComplete='off' disabled={disabled} />
                 </div>
-                <p>Seu DDD é {data.ddd}</p>
+                {/* <p>O DDD de sua localidade é {data.ddd}</p> */}
             </form>
         </div>
     )

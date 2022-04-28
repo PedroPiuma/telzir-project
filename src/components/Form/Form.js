@@ -38,9 +38,6 @@ const Form = () => {
 
     return (
         <form className='form' onSubmit={(event) => event.preventDefault()}>
-            {<p>{result ? `Ligação sem plano: R$ ${result}` : ''}</p>}
-            {<p>{planResult ? `Ligação com plano: R$ ${planResult}` : ''}</p>}
-
             <label htmlFor='origin-ddd'>
                 DDD de origem:
                 <select className='form-select' name="origin-ddd" onChange={(e) => setOrigin(e.target.value)}>
@@ -71,6 +68,11 @@ const Form = () => {
                     <option value='falemais120'>Fale Mais 120</option>
                 </select>
             </label>
+            <div id='prices' className='form-prices'>
+                <h3>Ligações</h3>
+                {<p>{planResult ? `Com plano: R$ ${planResult} ✔` : ''}</p>}
+                {<p>{result ? `Sem plano: R$ ${result} 😞` : ''}</p>}
+            </div>
         </form>
     )
 }
