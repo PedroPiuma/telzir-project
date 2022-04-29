@@ -5,7 +5,6 @@
 .cep-form-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   width: 320px;
   max-height: 100%;
   margin: 0 auto;
@@ -23,10 +22,14 @@
 
 .cep-form-container-box-input {
   border-radius: 8px;
-  height: 40px;
+  max-width: 250px;
   font-size: 24px;
   text-align: center;
-  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.cep-form-container-box-input:hover {
+  border: 2px solid #1a4982;
 }
 
 @media (min-width: 992px) {
@@ -37,13 +40,16 @@
 }
 
 .cep-form-container-box-input:focus {
-  box-shadow: 0px 0px 10px 3px rgb(0, 200, 255);
+  box-shadow: 0px 0px 10px 3px rgba(0, 255, 119, 0.733);
+  outline-color: #1a4982;
 }
 
-.margin-zero {
+.cep-form-container-box-p {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.cep-form-p {
   margin: 0;
-}
-
-.text-center {
   text-align: center;
 }

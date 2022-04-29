@@ -1,0 +1,81 @@
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgb(1, 0, 32);
+  padding-top: 50px;
+  font-size: 24px;
+  gap: 15px;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.contato-form-input {
+  box-sizing: border-box;
+  width: 300px;
+  min-height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  padding-left: 15px;
+}
+
+.contato-button-close {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+}
+
+.contato-button-close-bt {
+  padding-top: 30px;
+  width: fit-content;
+  background-color: transparent;
+  border: 0;
+  padding: 20px;
+}
+
+.contato-button-submit {
+  width: 200px;
+  font-size: 24px;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 5px 15px;
+  background-color: rgba(0, 255, 119, 0.733);
+  color: rgba(9, 0, 31, 0.692);
+  border-color: #1a4982;
+}
+
+.contato-button-submit:hover {
+  background-color: #1a4982;
+  color: rgba(0, 255, 119, 0.733);
+  border-color: rgba(0, 255, 119, 0.733);
+}
+
+.contato-form-textarea {
+  resize: none;
+  padding-top: 15px;
+}
+
+.contato-form-textarea:focus {
+  position: fixed;
+  z-index: 2;
+  height: 210px;
+}
+
+.flex-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+}

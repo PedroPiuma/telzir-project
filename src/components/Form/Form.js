@@ -58,7 +58,7 @@ const Form = () => {
             </label>
             <label>
                 Tempo:
-                <input className='form-input-time form-select' size={3} placeholder='Minutos' name="time" type={'text'} onChange={(e) => setTime(e.target.value)} />
+                <input className='form-input-time form-select' size={3} placeholder='Minutos' name="time" type={'text'} onChange={(e) => setTime(e.target.value)} autoComplete='off' />
             </label>
             <label htmlFor='plan'>
                 Planos:
@@ -70,8 +70,8 @@ const Form = () => {
             </label>
             <div id='prices' className='form-prices'>
                 <h3>Ligações</h3>
-                {<p>{planResult ? `Com plano: R$ ${planResult} ✔` : ''}</p>}
-                {<p>{result ? `Sem plano: R$ ${result} 😞` : ''}</p>}
+                {<p>{planResult ? `Com plano: R$ ${planResult}` + (Number(time) > 0 ? ' ✔' : '') : ''}</p>}
+                {<p>{result ? `Sem plano: R$ ${result}` + (Number(time) > 0 ? ' ❌' : '') : ''}</p>}
             </div>
         </form>
     )
