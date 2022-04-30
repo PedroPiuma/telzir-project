@@ -7,7 +7,7 @@ import { Fragment, useState } from 'react'
 const Navbar = () => {
     const [visible, setVisible] = useState(false)
     const [revertBtn, setRevertBtn] = useState(false)
-    const [contact, setContact] = useState(false)
+    const [contactFromNav, setContactFromNav] = useState(false)
     return (
         <Fragment>
             <nav className='navbar'>
@@ -25,11 +25,11 @@ const Navbar = () => {
                 visible ? <ul className='navbar-links'>
                     <li onClick={() => {
                         setVisible(!visible)
-                        setContact(!contact)
+                        setContactFromNav(!contactFromNav)
                     }} className='navbar-links-link'>Contato</li>
                     <li onClick={() => setVisible(!visible)} className='navbar-links-link'>FAQ</li></ul> : ''
             }
-            {contact ? <Contato visible={setContact} /> : ''}
+            {contactFromNav ? <Contato setContactFromNav={setContactFromNav} setRevertBtn={setRevertBtn} /> : ''}
         </Fragment>
     )
 }

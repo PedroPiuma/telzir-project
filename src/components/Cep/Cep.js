@@ -3,8 +3,8 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import InfoCep from '../InfoCep/InfoCep'
 
-const Form = (props) => {
-    const { visible } = props
+const Cep = (props) => {
+    const { setDddAsk } = props
     const [cep, setCep] = useState('')
     const [data, setData] = useState('')
     const [disabled, setDisabled] = useState(false)
@@ -26,11 +26,9 @@ const Form = (props) => {
         }
         if (cep.length === 8) request()
     }, [cep])
-
-
     return (
         <div className='cep-form'>
-            {data.ddd && !(ddds.some(e => e === Number(data.ddd))) ? <InfoCep data={data.ddd} visible={visible} /> : ''}
+            {data.ddd && !(ddds.some(e => e === Number(data.ddd))) ? <InfoCep data={data.ddd} setDddAsk={setDddAsk} /> : ''}
             <p className='cep-form-p'>Digite abaixo o CEP de sua localidade</p>
             <form className='cep-form-container'>
                 <div className='cep-form-container-box'>
@@ -42,4 +40,4 @@ const Form = (props) => {
     )
 }
 
-export default Form
+export default Cep

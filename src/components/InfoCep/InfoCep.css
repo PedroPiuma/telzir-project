@@ -24,6 +24,12 @@
   border-radius: 8px;
 }
 
+.infocep-contact {
+  cursor: pointer;
+  color: rgba(0, 255, 119, 0.733);
+  text-decoration: underline;
+}
+
 .hidden {
   display: none;
 }
