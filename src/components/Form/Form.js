@@ -49,9 +49,9 @@ const Form = () => {
             </label>
             <label htmlFor='target-ddd'>
                 DDD de destino:
-                <select className='form-select' name="target-ddd" onChange={(e) => setTarget(e.target.value)}>
+                <select className='form-select' name="target-ddd" defaultValue='016' onChange={(e) => setTarget(e.target.value)}>
                     <option value='011'>011</option>
-                    <option value='016' selected>016</option>
+                    <option value='016'>016</option>
                     <option value='017'>017</option>
                     <option value='018'>018</option>
                 </select>

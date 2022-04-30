@@ -33,15 +33,24 @@
 .contato-button-close {
   position: fixed;
   z-index: 1;
+  padding: 20px;
   right: 0;
 }
 
 .contato-button-close-bt {
-  padding-top: 30px;
+  padding: 0;
   width: fit-content;
   background-color: transparent;
   border: 0;
-  padding: 20px;
+  border-radius: 30px;
+}
+
+.contato-button-close-img {
+  border-radius: 20px;
+}
+
+.contato-button-close-img:hover {
+  box-shadow: 0 0 10px 5px #cc3300;
 }
 
 .contato-button-submit {
@@ -69,7 +78,7 @@
 .contato-form-textarea:focus {
   position: fixed;
   z-index: 2;
-  height: 210px;
+  height: 220px;
 }
 
 .flex-inline {
