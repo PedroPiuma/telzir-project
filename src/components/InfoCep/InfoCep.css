@@ -4,30 +4,61 @@
   align-items: center;
   position: fixed;
   border-radius: 30px;
-  text-align: start;
+  text-align: justify;
   line-height: 30px;
   padding: 30px;
-  margin: auto 30px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: rgb(1, 0, 32);
   box-shadow: 0 0 10px 10px #ffcc00;
-  margin-top: -100px;
+  max-width: 300px;
+  max-height: 350px;
+}
+
+@media (min-height: 992px) {
+  .infocep {
+    max-width: 600px;
+  }
 }
 
 .infocep-p {
   text-decoration: underline;
 }
 
-.contato-button {
+.infocep-button {
   margin-top: 20px;
-  width: fit-content;
-  border: 2.5px solid #0d2746a7;
+  border: 1px solid #ffcc00;
+  background-color: transparent;
+  color: #ffffff;
   border-radius: 8px;
+  width: 75px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .infocep-button {
+    font-size: 24px;
+  }
 }
 
 .infocep-contact {
   cursor: pointer;
   color: rgba(0, 255, 119, 0.733);
   text-decoration: underline;
+}
+
+@media (min-height: 992px) {
+  .infocep {
+    font-size: 24px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    gap: 15px;
+  }
 }
 
 .hidden {

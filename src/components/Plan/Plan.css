@@ -1,0 +1,86 @@
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 20px auto;
+  background-color: rgb(1, 0, 32);
+  font-size: 16px;
+  gap: 15px;
+  padding-top: 40px;
+  border-radius: 70px;
+  border: 1px solid #1a4982;
+}
+
+@media (min-width: 992px) {
+  .plan {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 1000px;
+    height: 500px;
+    font-size: 24px;
+    padding-right: 80px;
+  }
+}
+
+.plan-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-prices-title {
+  padding-bottom: 5px;
+}
+
+.plan-plans {
+  text-align: center;
+  width: 350px;
+}
+
+.plan-plans-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.plan-plans-list-p {
+  font-size: 14px;
+}
+
+.plan-button-close {
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  right: 0;
+  left: 1;
+  top: 0;
+  bottom: 1;
+  margin: auto 15px auto auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.plan-button-close-bt {
+  padding: 0;
+  width: fit-content;
+  background-color: transparent;
+  border: 0;
+  border-radius: 30px;
+}
+
+.plan-button-close-img {
+  border-radius: 20px;
+}
+
+.plan-button-close-img:hover {
+  box-shadow: 0 0 10px 5px #cc3300;
+}

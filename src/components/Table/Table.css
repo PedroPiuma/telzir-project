@@ -1,0 +1,11 @@
+.table {
+  text-align: center;
+  border-top: 5px solid #1a4982;
+  border-bottom: 5px solid #1a4982;
+  border-radius: 8px;
+}
+
+td {
+  padding: 5px;
+  border: 1px solid #1a4982;
+}

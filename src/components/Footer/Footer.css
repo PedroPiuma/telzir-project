@@ -1,0 +1,21 @@
+.footer {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(1, 0, 32);
+    bottom: 0;
+    height: 100px;
+    width: 1000px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
