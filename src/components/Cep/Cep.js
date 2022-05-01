@@ -33,7 +33,7 @@ const Cep = (props) => {
             <form className='cep-form-container'>
                 <div className='cep-form-container-box'>
                     <input id='cep' placeholder='Ex.: 14022071' className='cep-form-container-box-input' type='text' maxLength={8} onChange={(event) => setCep(event.target.value)} autoComplete='off' disabled={disabled} />
-                    {data.ddd ? <p className='cep-form-container-box-p'> Seu CEP é 0{data.ddd} de {data.localidade}/{data.uf}</p> : ''}
+                    {data.ddd ? <p className='cep-form-container-box-p'> Seu DDD é 0{data.ddd} de {data.localidade}/{data.uf}</p> : ''}
                 </div>
             </form>
         </div>

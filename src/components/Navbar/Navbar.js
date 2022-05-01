@@ -1,13 +1,16 @@
 import './Navbar.css'
-import logo from './img/telzir-logo.png'
-import menu from './img/open-icon.png'
-import Contato from '../Contato/Contato'
+import logo from '../../images/telzir-logo.png'
+import menu from '../../images/open-icon.png'
+import Contact from '../Contact/Contact'
+import Faq from '../Faq/Faq'
 import { Fragment, useState } from 'react'
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { setPlan } = props
     const [visible, setVisible] = useState(false)
     const [revertBtn, setRevertBtn] = useState(false)
     const [contactFromNav, setContactFromNav] = useState(false)
+    const [faq, setFaq] = useState(false)
     return (
         <Fragment>
             <nav className='navbar'>
@@ -18,18 +21,27 @@ const Navbar = () => {
                         setVisible(!visible)
                         setRevertBtn(!revertBtn)
                     }}>
-                    <img src={menu} height={20} alt='Seta do menu' className={revertBtn ? 'revert' : ''} />
+                    <img id='navbar-menu-arrow' src={menu} height={20} alt='Seta do menu' className={revertBtn ? 'revert' : ''} />
                 </button>
             </nav>
             {
-                visible ? <ul className='navbar-links'>
-                    <li onClick={() => {
+                visible ? <div className='navbar-links'>
+                    <span onClick={() => {
                         setVisible(!visible)
                         setContactFromNav(!contactFromNav)
-                    }} className='navbar-links-link'>Contato</li>
-                    <li onClick={() => setVisible(!visible)} className='navbar-links-link'>FAQ</li></ul> : ''
+                    }} className='navbar-links-link'>Contact</span>
+                    <button className='navbar-links-plan' onClick={() => {
+                        setVisible(!visible)
+                        setPlan(true)
+                        setRevertBtn(!revertBtn)
+                    }}>Planos Telzir</button>
+                    <span onClick={() => {
+                        setVisible(!visible)
+                        setFaq(!faq)
+                    }} className='navbar-links-link'>FAQ</span></div> : ''
             }
-            {contactFromNav ? <Contato setContactFromNav={setContactFromNav} setRevertBtn={setRevertBtn} /> : ''}
+            {contactFromNav ? <Contact setContactFromNav={setContactFromNav} setRevertBtn={setRevertBtn} /> : ''}
+            {faq ? <Faq setFaq={setFaq} setRevertBtn={setRevertBtn} /> : ""}
         </Fragment>
     )
 }

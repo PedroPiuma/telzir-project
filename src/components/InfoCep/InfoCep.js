@@ -1,5 +1,5 @@
 import './InfoCep.css'
-import Contato from '../Contato/Contato'
+import Contact from '../Contact/Contact'
 import { useState } from 'react'
 
 
@@ -18,7 +18,7 @@ const InfoCep = (props) => {
             <button className='infocep-button' onClick={() => {
                 setDddAsk(false)
             }}>OK</button>
-            {contactFromCep ? <Contato setContactFromCep={setContactFromCep} setDddAsk={setDddAsk} /> : ''}
+            {contactFromCep ? <Contact setContactFromCep={setContactFromCep} setDddAsk={setDddAsk} /> : ''}
         </div >
     )
 }
