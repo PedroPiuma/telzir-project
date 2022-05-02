@@ -16,8 +16,8 @@ function App() {
       <Navbar setPlan={setPlan} />
       <div className='main-container'>
         <div className='main-container-text'>
-          <p className='main-description'>A Telzir tem o prazer facilitar a comunicação entre as pessoas. Assim, está
-            disponível abaixo o melhor meio para entender porque nossos planos de telefonia são confiáveis e surpreendentes.
+          <p className='main-description'>A Telzir tem o prazer de facilitar a comunicação entre as pessoas. Disponibilizamos aqui
+            o melhor meio para entender porquê nossos planos de telefonia são confiáveis e excelentes.
             Você como cliente, pode escolher o DDD de origem e destino, o tempo da ligação em minutos e escolher qual o
             plano FaleMais que deseja utilizar. Analise o resultado e veja a vantagem de estar conosco!</p>
           <img className='main-description-robot' src={robot} alt='Robô Telzir' height={250} hidden />

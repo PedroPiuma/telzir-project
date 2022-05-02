@@ -21,7 +21,7 @@ const Faq = (props) => {
                     peça segunda via do boleto e muito mais.</p> : ''}
                 <span className='faq-question' onClick={() => setHow(!how)}>✍ Como assinar o plano?</span>
                 {how ? <p>Para contratar os planos da Telzir é necessário entrar em contato diretamente conosco.
-                    É simples e rápido. Estamos trabalhando com contratações de servições por meio de mensagem via
+                    É simples e rápido. Estamos trabalhando com contratações de serviços por meio de mensagem via
                     Whatsapp, 0800 ou então por email.
                 </p> : ''}
                 <span className='faq-question' onClick={() => setWhats(!whats)}><img src={whatsapp} alt='Ícone do whatsapp' height={24} /> Qual o Whatsapp da Telzir?</span>
